@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Single Price Grid Component</title>
 
@@ -13,18 +14,136 @@
     body {
       background: #e6eff6;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-size: 16px;
+      font-family: 'Karla', sans-serif;
+    }
+
+    h1 {
+      color: hsl(179, 62%, 43%);
+      font-weight: bold;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 1.125em;
+    }
+
+    h3 {
+      color: hsl(71, 73%, 54%);
+    }
+
+    p {
+      margin: 0.5em 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      opacity: 0.5;
+      margin-bottom: 0.25em;
     }
 
     .price {
-      background: white;
-      border-radius: 5px;
-      box-shadow: 0 0 20px #2bb3b1;
+      box-shadow: 0 0 40px rgba(43, 179, 177, 0.2);
+      max-width: 1440px;
+      display: grid;
+      grid-template: 1fr / 1fr 1fr;
+      border-radius: 10px;
+      overflow: hidden;
     }
 
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .price > div {
+      padding: 1.75em 3em;
+    }
+
+    .white {
+      grid-column: 1 / -1;
+      background: #fff;
+      color: hsl(218, 22%, 67%);
+    }
+
+    .dark-aqua {
+      background: #29b4b2;
+      color: #fff;
+    }
+
+    .light-aqua {
+      background: #4abebd;
+      color: #fff;
+    }
+
+    .amount span {
+      opacity: 0.5;
+      font-size: 0.5em;
+      margin-left: 0.5em;
+    }
+
+    .amount {
+      font-size: 2em;
+      display: flex;
+      align-items: center;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+      color: #fff;
+      background: hsl(71, 73%, 54%);
+      padding: 15px 5px;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 2em;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: hsl(71, 73%, 54%);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .attribution { 
+      font-size: 11px; text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @media (max-width: 641px) {
+
+      body {
+        height: 100%;
+        justify-content: top;
+      }
+
+      .price {
+        overflow: visible;
+      }
+
+      .dark-aqua, .light-aqua {
+        grid-column: 1 / -1;
+      }
+
+      footer {
+        position: initial;
+        width: 100%;
+      }
+
+    }
   </style>
 </head>
 
@@ -35,12 +154,13 @@
     <div class="white">
       <h1>Join our community</h1>
       <h3>30-day, hassle-free money back guarantee</h3>
-      <p>Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+      <p>Gain access to our full library of tutorials along with expert code reviews.</p>
+      <p>Perfect for any developers who are serious about honing their skills.</p>
     </div>
 
     <div class="dark-aqua">
       <h2>Monthly Subscription</h2>
-      <p class="price"><span>&dollar;29</span>per month</p>
+      <p class="amount">&dollar;29<span>per month</span></p>
       <p>Full access for less than &dollar;1 a day</p>
       <a href="" class="btn">Sign Up</a>
     </div>
