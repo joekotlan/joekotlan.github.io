@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,600,700&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+
+    <style>
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 90vh;
+        margin: 0;
+        font-family: 'Libre Franklin', sans-serif;
+        color: hsl(0, 0%, 59%);
+      }
+
+      h1 {
+        font-size: 2.25em;
+        font-weight: 100;
+        margin-bottom: 0.25em;
+        margin-top: 0.5em;
+      }
+
+      h1 strong {
+        color: #000;
+        font-weight: 700;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      form {
+        margin-top: 30px;
+        position: relative;
+      }
+
+      form label {
+        color: hsl(354, 100%, 66%);
+        position: absolute;
+        bottom: -20px;
+        left: 8%;
+        font-size: 0.75em;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .ping {
+        width: 40%;
+        text-align: center;
+      }
+
+      .ping p {
+        margin-top: 1em;
+        color: #000;
+      }
+
+      .main-img {
+        margin-top: 50px;
+        width: 90%;
+      }
+
+      #email {
+        width: 50%;
+        padding: 15px 25px;
+        border: 1px solid hsl(0, 0%, 79%);
+        border-radius: 100px;
+        font-size: 0.875em;
+        transition: all 0.3s ease-in-out;
+        font-weight: 100;
+      }
+
+      #email::placeholder {
+        color: hsl(0, 0%, 79%);
+      }
+
+      #email:focus {
+        border: 1px solid hsl(223, 87%, 63%);
+        outline: none;
+      }
+
+      #submit {
+        width: 30%;
+        margin-left: 20px;
+        background: hsl(223, 87%, 63%);
+        color: #fff;
+        border-radius: 100px;
+        padding: 15px 25px;
+        font-size: 0.875em;
+        font-weight: bold;
+        box-shadow: 0 5px 10px hsl(223, 87%, 85%);
+        transition: all 0.3s ease-in-out;
+      }
+
+      #submit:hover, #submit:focus {
+        opacity: 0.8;
+        cursor: pointer;
+        outline: none;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+      }
+
+      footer p {
+        font-size: 0.75em;
+      }
+
+      .social {
+        display: flex;
+        justify-content: center;
+      }
+
+      .social a {
+        border: 1px solid hsl(0, 0%, 89%);
+        border-radius: 50%;
+        background: #fff;
+        height: 35px;
+        width: 35px;
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .social a:hover {
+        background: hsl(223, 87%, 63%);
+        border: 1px solid hsl(223, 87%, 63%);
+      }
+
+      .social a:hover i {
+        color: #fff;
+      }
+
+      .social i {
+        color: hsl(223, 87%, 63%);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      @media (max-width: 1281px) {
+
+        .ping {
+          width: 60%;
+        }
+
+      }
+
+      @media (max-width: 641px) {
+
+        .ping {
+          width: 100%;
+          padding: 0 30px;
+        }
+
+        #email, #submit {
+          width: 90%;
+          display: block;
+          margin: 0 auto 20px auto;
+        }
+
+        #email {
+          padding: 15px 0 15px 30px;
+          width: calc(90% - 30px);
+        }
+
+        form label {
+          bottom: -35px;
+        }
+        
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <section class="ping">
+      <img src="images/ping-logo.jpg" alt="Ping logo" width="90"/>
+      <h1>We are launching <strong>soon!</strong></h1>
+      <p>Subscribe and get notified</p>
+      <form name="emailForm" onsubmit="return validateForm()">
+        <input type="text" name="email" placeholder="Your email address..." id="email" />
+        <label for="email">Please provide a valid email address</label>
+        <input type="submit" name="submit" value="Notify Me" id="submit" />
+      </form>
+      <img src="images/illustration-dashboard.png" alt="Ping project dashboard" class="main-img" />
+    </section>
+
+    <footer>
+      <div class="social">
+        <a href="https://www.facebook.com/joe.kotlan">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/Jkotlan">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/jkotlan/">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="attribution">
+        <p>&copy; Copyright Ping. All rights reserved. Coded by <a href="https://joekotlan.com">Joe Kotlan</a></p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script type="text/javascript">
+      function validateForm() {
+        var x = document.forms["emailForm"]["email"].value;
+        if( /(.+)@(.+){2,}\.(.+){2,}/.test(x) ){
+          return true;
+        } else {
+          $('form label').css("opacity", 1);
+          $('#email').css("border", "1px solid hsl(354, 100%, 66%)");
+          return false;
+        }
+      }
+    </script>
+
+  </body>
+</html>
