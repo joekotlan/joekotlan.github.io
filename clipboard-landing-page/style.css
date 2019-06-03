@@ -75,6 +75,7 @@ p {
 	padding-left: 7vw;
 	list-style-type: none;
 	text-align: left;
+	width: 40%;
 }
 
 .split-list li {
