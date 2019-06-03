@@ -1,0 +1,164 @@
+body {
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-size: 18px;
+	text-align: center;
+	background: url(images/bg-header-desktop.png) no-repeat top center;
+	background-size: 100% auto;
+	margin: 7vw 0 0 0;
+	color: hsl(210, 10%, 33%);
+}
+
+.logo {
+	max-width: 100px;
+	height: auto;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+p {
+	color: hsl(201, 11%, 66%);
+	max-width: 600px;
+	margin: 0 auto 3em auto;
+}
+
+.btn {
+	border-radius: 100px;
+	margin: 5px;
+	padding: 0.85em 2.65em;
+	color: #fff;
+	background: hsl(171, 66%, 44%);
+	border-bottom: 2px solid hsl(171, 66%, 34%);
+	box-shadow: 0 5px 10px hsl(171, 66%, 84%);
+	font-size: 0.75em;
+	font-weight: 700;
+	text-decoration: none;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.btn:hover {
+	opacity: 0.75;
+}
+
+.btn.blue {
+	background: hsl(233, 100%, 69%);
+	border-bottom: 2px solid hsl(233, 100%, 59%);
+	box-shadow: 0 5px 10px hsl(233, 100%, 89%);
+}
+
+.hero, .general, .logos {
+	margin-bottom: 7vw;
+}
+
+.split-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.split-list .img-offscreen {
+	margin-left: -10%;
+	width: 60%;
+	height: auto;
+}
+
+.img-offscreen img {
+	width: 100%;
+	height: auto;
+}
+
+.split-list ul {
+	padding-left: 7vw;
+	list-style-type: none;
+	text-align: left;
+}
+
+.split-list li {
+	width: 75%;
+	line-height: 1.5em;
+}
+
+.features {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 7vw;
+}
+
+.features div {
+	width: calc(33.3% - 6vw);
+	margin: 0 3vw;
+}
+
+.features i {
+	color: hsl(201, 11%, 66%);
+}
+
+.logos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.logos img {
+	height: fit-content;
+}
+
+footer {
+	background: #efefef;
+	display: grid;
+	grid-template: 1fr / 100px 1fr 20%;
+	align-items: center;
+	justify-items: center;
+	margin: 0;
+	padding: 0 7vw;
+	font-size: 0.75em;
+	text-align: left;
+}
+
+footer .logo {
+	max-width: 50px;
+}
+
+footer nav {
+	padding: 0 25%;
+}
+
+footer nav ul {
+	list-style-type: none;
+}
+
+footer nav li {
+	display: inline-block;
+	width: 100px;
+	margin: 10px 20px;
+}
+
+footer a {
+	color: hsl(201, 11%, 66%);
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+footer a i {
+	color: hsl(210, 10%, 33%);
+	transition: color 0.3s ease-in-out;
+}
+
+footer a:hover,
+footer a:hover i {
+	color: hsl(171, 66%, 44%);
+}
+
+footer .social a {
+	margin: 0 10px;
+}
+
+@media (max-width: 641px) {
+    body {
+    	padding: 0 30px;
+    }
+}
