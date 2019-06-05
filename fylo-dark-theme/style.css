@@ -1,16 +1,17 @@
 body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 14px;
-	line-height: 2.25em;
-	background: hsl(217, 28%, 15%);
 	color: #fff;
 	margin: 0;
+	background: hsl(216, 30%, 13%);
+	line-height: 1.75em;
 }
 
 header {
 	padding: 4vw 7vw;
 	display: flex;
 	align-items: center;
+	background: hsl(217, 28%, 15%);
 }
 
 header img {
@@ -53,7 +54,10 @@ header a:hover {
 	text-align: center;
 	margin: 0 auto;
 	width: 60%;
-	padding: 0 20%;
+	padding: 0 20% 250px 20%;
+	background: url("images/bg-curvy-desktop.svg") hsl(217, 28%, 15%) no-repeat
+		center bottom;
+	background-size: 100% auto;
 }
 
 .intro h1 {
@@ -66,8 +70,9 @@ header a:hover {
 
 .intro p {
 	font-size: 1.25em;
-	width: 50%;
+	width: 60%;
 	margin: 1em auto 3em auto;
+	line-height: 1.875em;
 }
 
 .intro img {
@@ -89,4 +94,320 @@ header a:hover {
 
 .btn:hover {
 	opacity: 0.75;
+}
+
+.features {
+	padding: 0 20%;
+	display: grid;
+	grid-gap: 7vw;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	text-align: center;
+}
+
+.features h3 {
+	font-size: 1.5em;
+}
+
+.image-and-text {
+	padding: 7vw;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.image-and-text .img-container,
+.image-and-text .text {
+	flex: 1 0 350px;
+}
+
+.image-and-text img {
+	width: 90%;
+	height: auto;
+}
+
+.image-and-text h2 {
+	font-size: 3em;
+	line-height: 1.5em;
+	width: 75%;
+}
+
+.link {
+	color: hsl(176, 68%, 64%);
+	border-bottom: 1px solid hsl(176, 68%, 64%);
+	font-size: 1.25em;
+	padding-bottom: 4px;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.link:hover {
+	color: hsl(198, 60%, 50%);
+	border-color: hsl(198, 60%, 50%);
+}
+
+.testimonials {
+	margin: 7vw;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.testimonials div {
+	flex: 1 0 250px;
+	background: hsl(219, 30%, 18%);
+	padding: 30px 30px 10px 30px;
+	margin: 20px;
+}
+
+.testimonials > img {
+	position: absolute;
+	top: -10px;
+	left: 0;
+	z-index: -1;
+}
+
+.testimonials div img {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	float: left;
+}
+
+.testimonials h4 {
+	font-size: 0.75em;
+	margin-left: 10px;
+	display: inline-block;
+	line-height: 1.5em;
+}
+
+.testimonials h4 span {
+	display: block;
+	font-weight: 400;
+}
+
+.cta {
+	position: absolute;
+	top: -550px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 60%;
+	padding: 4vw;
+	background: hsl(216, 30%, 13%);
+	border-radius: 15px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+	text-align: center;
+}
+
+.cta h2 {
+	font-size: 2em;
+}
+
+.cta p {
+	width: 75%;
+	margin: 0 auto 2em auto;
+}
+
+input[type="text"] {
+	padding: 20px;
+	border: 0;
+	border-radius: 100px;
+	width: 60%;
+	border: 3px solid #fff;
+	transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"] {
+	padding: 20px;
+	border: 0;
+	border-radius: 100px;
+	color: #fff;
+	background: hsl(198, 60%, 50%);
+	border: 3px solid hsl(198, 60%, 50%);
+	width: 20%;
+	margin-left: 20px;
+	font-weight: bold;
+	transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+	background: hsl(176, 68%, 64%);
+	border-color: hsl(176, 68%, 64%);
+	cursor: pointer;
+}
+
+input[type="text"]:focus {
+	outline: none;
+	border: 3px solid hsl(198, 60%, 50%);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+	margin-top: 350px;
+	padding: 300px 7vw 7vw 7vw;
+	background: hsl(216, 53%, 9%);
+	display: grid;
+	grid-template: 100px 1fr / 2fr 1fr 2fr 1fr;
+	position: relative;
+}
+
+footer > img {
+	grid-row: 1;
+}
+
+footer > :not(img) {
+	grid-row: 2;
+}
+
+.tagline {
+	display: flex;
+}
+
+.tagline i {
+	width: 10%;
+	margin-top: 5px;
+}
+
+.tagline p {
+	width: 75%;
+	margin: 0;
+}
+
+.contact i {
+	margin-right: 10px;
+}
+
+footer nav ul {
+	padding: 0 20%;
+}
+
+footer nav li {
+	display: inline-block;
+	width: 49%;
+}
+
+.social {
+	display: flex;
+}
+
+.social a {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+}
+
+footer ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+footer li {
+	margin-bottom: 1em;
+}
+
+footer a {
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+	color: hsl(198, 60%, 50%);
+}
+
+@media (max-width: 961px) {
+	header img {
+		max-width: 80px;
+	}
+	header li {
+		margin: 0 5px;
+	}
+	.intro {
+		padding: 0;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.intro img {
+		width: 80%;
+	}
+	.intro h1 {
+		width: 90%;
+		margin: 20px auto;
+		font-size: 1.75em;
+		line-height: 1.5em;
+	}
+	.intro p {
+		margin: 0 auto;
+		width: 75%;
+		font-size: 1em;
+	}
+	.btn {
+		display: block;
+		margin: 2em 40px 4em 40px;
+		padding: 20px;
+	}
+	.features {
+		padding: 30px;
+	}
+	.image-and-text h2 {
+		font-size: 1.25em;
+	}
+	.link {
+		font-size: 1em;
+	}
+	.testimonials div {
+		margin: 20px 0;
+	}
+	footer {
+		margin-top: 200px;
+		padding-top: 350px;
+		grid-template: 1fr / 1fr;
+		grid-gap: 50px;
+	}
+	.cta {
+		width: 75%;
+		top: -600px;
+	}
+	.cta h2 {
+		font-size: 1.25em;
+	}
+	form {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	input[type="text"],
+	input[type="submit"] {
+		display: block;
+		width: 100%;
+		margin: 0 0 20px 0;
+	}
+	footer img {
+		grid-area: 1 / 1;
+	}
+	.tagline {
+		grid-area: 2 / 1;
+	}
+	footer nav {
+		grid-area: 4 / 1;
+	}
+	.contact {
+		grid-area: 3 / 1;
+	}
+	.social {
+		grid-area: 5 / 1;
+		justify-self: center;
+	}
+	footer nav ul {
+		padding: 0;
+	}
+	footer nav ul li {
+		width: 100%;
+	}
 }
