@@ -1,0 +1,92 @@
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	line-height: 2.25em;
+	background: hsl(217, 28%, 15%);
+	color: #fff;
+	margin: 0;
+}
+
+header {
+	padding: 4vw 7vw;
+	display: flex;
+	align-items: center;
+}
+
+header img {
+	max-width: 150px;
+	height: auto;
+}
+
+header nav {
+	width: 80%;
+	display: inline-block;
+	text-align: right;
+	margin-left: auto;
+}
+
+header ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+header li {
+	display: inline-block;
+	margin: 0 30px;
+}
+
+header li:last-child {
+	margin-right: 0;
+}
+
+header a {
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+}
+
+header a:hover {
+	color: hsl(176, 68%, 64%);
+}
+
+.intro {
+	text-align: center;
+	margin: 0 auto;
+	width: 60%;
+	padding: 0 20%;
+}
+
+.intro h1 {
+	font-family: "Raleway", sans-serif;
+	font-size: 2.5em;
+	line-height: 1.75em;
+	width: 80%;
+	margin: 1em auto;
+}
+
+.intro p {
+	font-size: 1.25em;
+	width: 50%;
+	margin: 1em auto 3em auto;
+}
+
+.intro img {
+	max-width: 100%;
+}
+
+.btn {
+	background: hsl(198, 60%, 50%);
+	color: #fff;
+	padding: 20px 100px;
+	border-radius: 50px;
+	font-family: "Raleway", sans-serif;
+	font-size: 1.25em;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+	transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+	opacity: 0.75;
+}

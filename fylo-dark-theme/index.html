@@ -2,105 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-  Features
-  Team
-  Sign In
 
-  All your files in one secure location, accessible anywhere.
+   <header>
 
-  Fylo stores all your most important files in one secure location. Access them wherever 
-  you need, share and collaborate with friends family, and co-workers.
+      <img src="images/logo.svg" alt="fylo logo" />
 
-  Get Started
+      <nav>
+         <ul>
+            <li><a href="https://joekotlan.com">Features</a></li>
+            <li><a href="https://joekotlan.com">Team</a></li>
+            <li><a href="https://joekotlan.com">Sign In</a></li>
+         </ul>
+      </nav>
 
-  Access your files, anywhere
+   </header>
+  
+   <main>
 
-  The ability to use a smartphone, tablet, or computer to access your account means your 
-  files follow you everywhere.
+      <section class="intro">
+         <img src="images/illustration-intro.png" alt="illustration of people pulling files out of folders" />
+         <h1>All your files in one secure location, accessible anywhere.</h1>
+         <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
+         <a href="https://joekotlan.com" class="btn">Get Started</a>
+      </section>
 
-  Security you can trust
+      <section class="features">
 
-  2-factor authentication and user-controlled encryption are just a couple of the security 
-  features we allow to help secure your files.
+         <div>
+            <img src="images/icon-access-anywhere.svg" alt="computer icon" />
+            <h3>Access your files, anywhere</h3>
+            <p>The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+         </div>
 
-  Real-time collaboration
+         <div>
+            <img src="images/icon-security.svg" alt="badge protected icon" />
+            <h3>Security you can trust</h3>
+            <p>2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
+         </div>
 
-  Securely share files and folders with friends, family and colleagues for live collaboration. 
-  No email attachments required.
+         <div>
+            <img src="images/icon-collaboration.svg" alt="clock with checkmark icon" />
+            <h3>Real-time collaboration</h3>
+            <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+         </div>
 
-  Store any type of file
+         <div>
+            <img src="images/icon-any-file.svg" alt="folder icon" />
+            <h3>Store any type of file</h3>
+            <p>Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
+         </div>
 
-  Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
-  file types to be securely stored and shared.
+      </section>
 
-  Stay productive, wherever you are
+      <section class="image-and-text">
+         <img src="images/illustration-stay-productive.png" alt="illustration of people holding speech bubbles" />
+         <div>
+            <h2>Stay productive, wherever you are</h2>
+            <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+            <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+            <a href="https://joekotlan.com" class="link">See how Fylo works</a>
+         </div>
+      </section>
 
-  Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
-  storage needs.
+      <section class="testimonials">
 
-  Securely share files and folders with friends, family and colleagues for live collaboration. No email 
-  attachments required.
+         <img src="images/bg-quotes.png" alt="quote icon" />
 
-  See how Fylo works
+         <div>
+            <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+            <img src="images/profile-1.jpg" alt="headshot of person" />
+            <h4>Satish Patel<span>Founder & CEO, Huddle</span></h4>
+         </div>
 
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
+         <div>
+            <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+            <img src="images/profile-2.jpg" alt="headshot of person" />
+            <h4>Bruce McKenzie<span>Founder & CEO, Huddle</span></h4>
+         </div>
 
-  Satish Patel
-  Founder & CEO, Huddle
+         <div>
+            <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+            <img src="images/profile-3.jpg" alt="headshot of person" />
+            <h4>Iva Boyd<span>Founder & CEO, Huddle</span></h4>
+         </div>
 
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
+      </section>
 
-  Bruce McKenzie
-  Founder & CEO, Huddle
+   </main>
 
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
+   <footer>
 
-  Iva Boyd
-  Founder & CEO, Huddle
+      <section class="cta">
+         <h2>Get early access today</h2>
+         <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+         <form>
+            <input type="text" name="email" placeholder="email@example.com">
+            <input type="submit" name="submit" value="Get Started For Free">
+         </form>
+      </section>
 
-  Get early access today
+      <img src="images/logo.svg" alt="fylo logo" />
 
-  It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
-  questions, our support team would be happy to help you.
+      <div class="tagline">
+         <i class="fas fa-map-marker-alt"></i>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+      </div>
 
-  Get Started For Free
+      <ul class="contact">
+         <li><a href="tel:15431234567"><i class="fas fa-phone"></i>+1-543-123-4567</a></li>
+         <li><a href="mailto:example@flyo.com"><i class="fas fa-envelope"></i>example@flyo.com</a></li>
+      </ul>
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-  dolore magna aliqua
+      <nav>
+         <ul>
+            <li><a href="https://joekotlan.com">About Us</a></li>
+            <li><a href="https://joekotlan.com">Contact Us</a></li>
+            <li><a href="https://joekotlan.com">Jobs</a></li>
+            <li><a href="https://joekotlan.com">Terms</a></li>
+            <li><a href="https://joekotlan.com">Press</a></li>
+            <li><a href="https://joekotlan.com">Privacy</a></li>
+            <li><a href="https://joekotlan.com">Blog</a></li>
+         </ul>
+      </nav>
 
-  +1-543-123-4567
-  example@fylo.com
+      <div class="social">
+         <a href="https://joekotlan.com"><i class="fab fa-facebook-f"></i></a>
+         <a href="https://joekotlan.com"><i class="fab fa-twitter"></i></a>
+         <a href="https://joekotlan.com"><i class="fab fa-instagram"></i></a>
+      </div>
 
-  About Us
-  Jobs
-  Press
-  Blog
-
-  Contact Us
-  Terms
-  Privacy
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+   </footer>
+   
 </body>
 </html>
