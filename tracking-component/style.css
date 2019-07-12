@@ -1,0 +1,149 @@
+body {
+	margin: 0;
+	font-family: 'Barlow', sans-serif;
+	font-size: 18px;
+}
+
+header {
+	padding: 4vw 10vw 8vw 10vw;
+	display: grid;
+	grid-template: 1fr / 100px 1fr;
+}
+
+header nav {
+	margin-left: auto;
+	font-family: 'Barlow Condensed', sans-serif;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+header nav ul {
+	list-style-type: none;
+}
+
+header nav ul li {
+	display: inline-block;
+}
+
+header nav ul li a {
+	padding: 10px 20px;
+	color: hsl(230, 29%, 20%);
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+header nav ul li a:hover {
+	text-decoration: underline;
+}
+
+header nav ul li:last-child a {
+	margin-left: 40px;
+	color: hsl(231, 7%, 65%);
+	position: relative;
+}
+
+header nav ul li:last-child a:before {
+	content: '';
+   display: inline-block;
+   width: 6px;
+   height: 6px;
+   border-radius: 5px;
+   background-color: hsl(231, 7%, 65%);
+   position: absolute;
+   top: 15px;
+   left: -25px;
+}
+
+main section {
+	display: flex;
+}
+
+main section > div {
+	width: 50%;
+}
+
+.blue-background {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 50%;
+	width: 50%;
+	border-radius: 0 0 0 100px;
+	background: hsl(207, 33%, 95%);
+	z-index: -1;
+}
+
+.image {
+	text-align: right;
+}
+
+.image img {
+	max-width: 90%;
+}
+
+.info {
+	padding: 0 10vw;
+}
+
+.info h1 {
+	font-size: 3em;
+	text-transform: uppercase;
+	font-family: 'Barlow Condensed', sans-serif;
+	font-weight: 700;
+	color: hsl(230, 29%, 20%);
+	line-height: 1em;
+	margin: 0;
+}
+
+.info h2 {
+	color: hsl(230, 11%, 40%);
+	font-weight: 400;
+	font-size: 1em;
+	margin: 40px 0;
+}
+
+.info h3,
+.cta a {
+	text-transform: uppercase;
+	color: hsl(231, 7%, 65%);
+	letter-spacing: 5px;
+	font-size: 14px;
+	font-family: 'Barlow Condensed', sans-serif;
+	font-weight: 400;
+}
+
+.info h3 span {
+	padding: 5px 10px;
+	border-radius: 50px;
+	background: hsl(230, 29%, 20%);
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: 1px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.cta {
+	margin-top: 20px;
+}
+
+.cta a {
+	text-decoration: none;
+}
+
+.cta a span {
+	background: hsl(0, 100%, 68%);
+	padding: 15px 35px;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	color: #fff;
+	display: inline-block;
+	margin-right: 10px;
+	transition: all 0.3s ease-in-out;
+}
+
+.cta a:hover span {
+	opacity: 0.75;
+}
