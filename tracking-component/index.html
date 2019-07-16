@@ -12,6 +12,11 @@
 	<body>
 		<header>
 			<img src="images/logo.svg" alt="logo" />
+			<div class="mobile-menu-button">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 			<nav>
 				<ul>
 					<li><a href="https://joekotlan.com">Product</a></li>
@@ -38,4 +43,13 @@
 			</section>
 		</main>
 	</body>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			jQuery('.mobile-menu-button').click(function(){
+				jQuery('header nav').toggleClass('show');
+				jQuery('.mobile-menu-button').toggleClass('show');
+			}); 			
+		});
+	</script>
 </html>
