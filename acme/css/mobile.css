@@ -1,0 +1,381 @@
+@media (max-width: 1000px) {
+	header {
+		padding: 0 5vw 20px;
+	}
+
+   header > p {
+   	font-size: 0.75em;
+   	margin: 0 20px;
+   	padding-right: 20px;
+   }
+}
+
+@media (max-width: 767px) {
+
+	/** General
+	---------------------------------------------------------*/
+	body {
+		background: var(--black);
+	}
+
+	main {
+		transition: all 0.25s ease;
+	}
+
+	main.open {
+		opacity: 0.5;
+	}
+
+	/** Header
+	---------------------------------------------------------*/
+	header {
+		border-bottom: 0;
+		padding-bottom: 0;
+		align-items: center;
+		justify-content: center;
+		background: var(--grey);
+		position: relative;
+		z-index: 2;
+	}
+
+	header nav {
+		position: absolute;
+		top: 100%;
+		background: var(--white);
+		width: 100%;
+		text-align: center;
+		transition: all 0.25s ease;
+		top: -400px;
+		opacity: 0;
+	}
+
+	header .mobile-headline {
+		display: block;
+		color: var(--blue);
+		margin: 20px 0 5px;
+	}
+
+	header nav ul {
+		flex-direction: column;
+		padding: 10px 40px 40px;
+		border-top: 1px solid var(--grey);
+	}
+
+	header nav ul a {
+		padding: 15px;
+		display: block;
+		color: #707070;
+		background: var(--grey);
+		margin: 5px 0;
+	}
+
+	header.open nav {
+		top: 100%;
+		opacity: 1;
+	}
+
+	header > p {
+		display: none;
+	}
+
+	header > a {
+		height: 65%;
+		margin-bottom: 0;
+	}
+
+	header > a img {
+		padding: 0;
+		height: 100%;
+		max-height: 100%;
+		background: transparent;d
+	}
+
+	header > a img:nth-of-type(1) {
+		display: none;
+	}
+
+	header > a img:nth-of-type(2) {
+		display: initial;
+	}
+
+	header button {
+		display: initial;
+		position: absolute;
+		top: 0;
+		right: 5vw;
+		width: 40px;
+		height: 100%;
+		border: none;
+		box-shadow: none;
+		background: transparent;
+	}
+
+	header button span {
+		display: block;
+		height: 3px;
+		margin: 5px 0;
+		border-radius: 50px;
+		width: 100%;
+		background: var(--dark-blue);
+		transition: all 0.25s ease;: 
+	}
+
+	header button:focus {
+		outline: none;
+	}
+
+	header.open button span:nth-of-type(1) {
+		transform: rotate(40deg);
+		transform-origin: top left;
+		background: #d81e05;
+	}
+
+	header.open button span:nth-of-type(2) {
+		opacity: 0;
+	}
+
+	header.open button span:nth-of-type(3) {
+		transform: rotate(-40deg);
+		transform-origin: bottom left;
+		background: #d81e05;
+	}
+
+   /** Hero Section
+   ---------------------------------------------------------*/
+   .hero {
+   	background: var(--light-blue);
+   	padding: 7vw 7vw 150px;
+   }
+
+   .hero img {
+   	display: none;
+   }
+
+   .hero .mobile-text {
+   	display: block;
+   	margin-bottom: 60px;
+   }
+
+   .hero h1 {
+   	font-size: 0.875em;
+   	font-weight: 500;
+   	margin-top: 2em;
+   	max-width: 60%;
+   	background-image: url('../assets/dot.png');
+   	background-position: left bottom;
+   	background-repeat: repeat-x;
+   }
+
+   .hero h1 span {
+   	margin: .25em 0 0.5em;
+   	font-size: 2.5em;
+   	font-weight: 700;
+   	line-height: 1em;
+   	padding-bottom: 20px;
+   }
+
+   .hero p {
+   	font-size: 0.875em;
+   	font-weight: 500;
+   	opacity: 1;
+   }
+
+   /** Insights Section
+   ---------------------------------------------------------*/
+   .slider {
+   	background: var(--dark-blue);
+   	color: var(--white);
+   	padding: 7vw;
+   }
+
+   .slider h2 span,
+   .events h2 span {
+   	font-weight: 700;
+   }
+
+   .slider p {
+   	color: var(--grey);
+   }
+
+   .insights img {
+   	height: 150px;
+   	width: 100%;
+   	object-fit: cover;
+   }
+
+   .insights a.slick-current.slick-active img {
+   	height: 100%;
+   }
+
+   .slick-dots {
+   	padding: 0;
+   	margin: 0;
+   	list-style-type: none;
+   	display: flex;
+   	justify-content: center;
+   }
+
+	.slick-dots li button {
+   	background: transparent;
+   	border: 1px solid var(--grey);
+   	border-radius: 50px;
+   	color: transparent;
+   	width: 17px;
+   	height: 17px;
+   	margin: 5px;
+   }
+
+   .slick-dots li.slick-active button {
+   	background: var(--grey);
+   }
+
+
+   /** Fractal Section
+   ---------------------------------------------------------*/
+   .fractal-bg {
+   	padding-bottom: 100px;
+   }
+   .fractal-bg p {
+   	margin-bottom: 40px;
+   	max-width: 100%;
+   }
+
+
+   /** Events Section
+   ---------------------------------------------------------*/
+   .events {
+   	padding: 7vw;
+   }
+
+   .events > p {
+   	color: #707070;
+   }
+
+   .events .slick-dots {
+   	margin-top: 20px;
+   }
+
+   .events .slick-dots li button {
+   	border: 1px solid #c1c1c1;
+   }
+
+   .events .slick-dots li.slick-active button {
+   	background: #c1c1c1;
+   }
+
+   .events-slider .event {
+   	padding-top: 20px;
+   	transition: all 0.25s ease;
+   	background: var(--dark-blue);
+   }
+
+   .events-slider .event:nth-of-type(1) h3,
+	.events-slider .event:nth-of-type(1) h5 {
+		font-weight: 500;
+	}
+
+	.events-slider .event.slick-current.slick-active h3,
+	.events-slider .event.slick-current.slick-active h5 {
+		font-weight: 700;
+	}
+
+   .events-slider .event.slick-current.slick-active {
+   	padding-top: 80px;
+   }
+
+   .events-slider .event .date {
+   	background: var(--white);
+   }
+
+   .events-slider .event .date p {
+   	color: var(--green);
+   }
+
+   .events h4 {
+   	margin-bottom: 1em;
+   }
+
+   .events h5 {
+   	color: #707070;
+   }
+
+   .events-slider .event > img:nth-of-type(2) {
+   	display: none;
+   }
+
+   .events-slider .event > img:nth-of-type(3) {
+   	display: initial;
+		position: absolute;
+		bottom: -44px;
+		left: 0;
+		height: 45px;
+	}
+
+
+	/** Footer
+	---------------------------------------------------------*/
+	footer  {
+		background: #ccc;
+	}
+
+	footer > :not(.mobile) {
+		display: none;
+	}
+
+	footer .mobile {
+		display: initial;
+		width: 100%;
+	}
+
+	footer .mobile a {
+		color: #707070;
+		background: var(--grey);
+		padding: 20px 30px;
+		font-weight: 700;
+	}
+
+	footer .mobile ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	footer nav,
+	footer li {
+		width: 100%;
+		display: block;
+	}
+
+	footer a {
+		display: block;
+		text-align: center;
+		margin: 10px 0;
+	}
+
+	footer p {
+		font-size: 1.25em;
+		margin: 20px 0 5px;
+		text-align: center;
+		color: var(--blue);
+		padding-bottom: 5px;
+		border-bottom: 1px solid #707070;
+	}
+
+	footer .mobile > a {
+		width: calc(50% - 65px);
+		display: inline-block;
+	}
+
+	footer .mobile > a:nth-of-type(1) {
+		margin-right: 5px;
+	}
+
+	footer .mobile > a:nth-of-type(2) {
+		margin-left: 5px;
+	}
+
+	footer a:hover {
+		background: #707070;
+		color: var(--white);
+	}
+}
