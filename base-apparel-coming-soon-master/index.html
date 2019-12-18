@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<title>Frontend Mentor | Base Apparel coming soon page</title>
+	</head>
+	<body>
+		<div class="info">
+			<img src="images/logo.svg" alt="base apparel logo" />
+		  	<h1><span>We're</span> coming soon</h1>
+		  	<p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+		  	<form>
+		  		<input type="text" name="email" placeholder="Email Address" onblur="validateEmail(this.value);">
+		  		<input type="submit" value="Submit">
+		  	</form>
+		</div>
+		<div class="img">
+			<img
+				src="images/hero-desktop.jpg"
+				srcset="images/hero-mobile.jpg 375w,
+    			images/hero-desktop.jpg 610w"
+  				loading="lazy"
+  				alt="Woman in teal staring at camera" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		if ($('input[type=text].error').length > 0) { 
+		  $('form').addClass('error'); 
+		}
+	</script>
 </html>

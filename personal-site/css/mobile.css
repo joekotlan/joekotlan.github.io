@@ -1,0 +1,380 @@
+@media (max-width: 961px) {
+	/** General
+	---------------------------------------------------------*/
+	body {
+		padding-left: 0;
+	}
+
+	.daily-sites {
+		display: none;
+	}
+
+	.social-sidebar {
+		top: 0;
+		bottom: unset;
+		right: 10px;
+		left: unset;
+		flex-direction: row;
+		z-index: 4; /* To overlap top white bar */
+	}
+
+	.social-sidebar.front {
+		display: none;
+	}
+
+	.social-sidebar a,
+	.social-sidebar a:last-child {
+		margin: 10px;
+		display: flex;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.25em;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	/** Header
+	---------------------------------------------------------*/
+	.menu {
+		display: initial;
+		bottom: 100px;
+		top: unset;
+	}
+
+	header nav {
+		position: absolute;
+		left: 0;
+		height: 80vh;
+		width: 100vw;
+		background: var(--bg-grey);
+		opacity: 0;
+		z-index: -1;
+		pointer-events: none;
+	}
+
+	header nav ul {
+		position: fixed;
+		bottom: 200px;
+		width: 100%;
+		margin: 0 50px 0 0;
+		flex-direction: column-reverse;
+		justify-content: center;
+		text-align: right;
+	}
+
+	header nav ul li a {
+		color: var(--dark-grey);
+		font-size: 2em;
+		padding-right: 25px;
+	}
+
+	header nav ul li a:hover {
+		background: initial;
+		color: var(--red);
+	}
+
+	/** Footer
+	---------------------------------------------------------*/
+	footer {
+		display: block;
+		padding: 50px 35px 100px;
+	}
+
+	.footer-form p {
+		font-size: 1.5em;
+	}
+
+	.footer-form ul li label {
+		margin-bottom: 5px;
+	}
+
+	.footer-social {
+		margin: 15vw 0 0;
+	}
+
+	.footer-social a {
+		width: 25%;
+	}
+
+	.footer-social img {
+		width: 50%;
+		height: auto;
+	}
+
+	footer nav ul {
+		width: 80%;
+	}
+
+	footer nav a {
+		line-height: 1.25em;
+	}
+
+	/** Home Page
+	---------------------------------------------------------*/
+	.hero {
+		width: 100vw;
+	}
+	.intro {
+		height: calc(100vh - 40px);
+		top: 0;
+	}
+
+	.intro picture  {
+		width: 100%;
+		height: 100%;
+	}
+
+	.intro picture img {
+		margin-left: -25%;
+	}
+
+	.intro h1 {
+		position: absolute;
+		bottom: 35%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: calc(100% - 110px);
+		font-size: 2.25em;
+		background: var(--white);
+		padding: 20px;
+		border-radius: 30px;
+		box-shadow: 0 0 40px rgba(0,0,0,0.3);
+	}
+
+	#rotating-text {
+		height: 100%;
+		width: 100%;
+		margin-left: auto;
+		overflow: hidden;
+		z-index: 1;
+	}
+
+	#rotating-text svg {
+		right: -45px;
+		top: -85px;
+		left: unset;
+	}
+
+	.dribbble {
+		right: 87px;
+		top: 45px;
+		left: unset;
+		z-index: 2;
+	}
+
+	.latest {
+		grid-template: repeat(auto-fit, minmax(100px, 1fr)) / 1fr;
+	}
+
+	.latest h2 {
+		grid-column: 1;
+		font-size: 1.75em;
+		margin: 35px;
+	}
+
+	.latest h3 {
+		font-size: 1.75em;
+	}
+
+	.latest > div {
+		padding: 50px 35px;
+	}
+
+	.latest-literature > a {
+		margin: 50px 35px;
+	}
+
+	.bio {
+		padding: 50px 35px;
+		font-size: 1.25em;
+	}
+
+	.bio h2 {
+		margin-top: 0;
+		margin-bottom: 0.5em;
+	}
+
+	/** My Work
+	---------------------------------------------------------*/
+	.work {
+		grid-template: 1fr / 1fr 1fr;
+		grid-auto-rows: 200px;
+		margin-right: 0;
+		grid-gap: 0;
+	}
+
+	.work > div p {
+		font-size: 1em;
+		margin: 20px 40px 40px;
+	}
+
+	.badges img {
+		height: 20px;
+		width: 20px;
+	}
+
+	/** My Work - Single
+	---------------------------------------------------------*/
+	.work-info {
+		width: 100%;
+		height: initial;
+		padding: 50px 35px;
+		position: initial;
+		overflow: auto;
+	}
+
+	.shots {
+		width: 100%;
+	}
+
+	/** Journal
+	---------------------------------------------------------*/
+	.blog-header {
+		padding: 50px 35px;
+	}
+
+	.blog-header ul ul li {
+		display: flex;
+		align-items: center;
+	}
+
+	.blog-header ul ul li a {
+		padding: 12px;
+		font-size: 0.75em;
+	}
+
+	.posts {
+		grid-template: 1fr / 1fr;
+		padding: 50px 35px;
+	}
+
+	.posts > .double {
+		grid-column: 1;
+	}
+
+	.posts > a > div > div {
+		padding: 50px 35px;
+	}
+
+	/** Journal - Single
+	---------------------------------------------------------*/
+	.single article {
+		padding: 50px 35px;
+	}
+
+	.single h1 {
+		margin-top: 0;
+		font-size: 1.5em;
+	}
+
+	.single .content .date {
+		font-size: 0.625em;
+	}
+
+	.single .content h4.category {
+		font-size: 0.5em;
+	}
+
+	.single p,
+	.single ul {
+		font-size: 0.825em;
+	}
+
+	.blog-post-ending {
+		margin-top: 60px;
+	}
+
+	/** Inspiration
+	---------------------------------------------------------*/
+	.inspiration-types {
+		grid-template: 1fr / 1fr;
+		overflow: hidden;
+	}
+
+	.inspiration-types article {
+		grid-column: 1;
+		grid-template: 1fr / 1fr;
+		padding: 50px 35px;
+	}
+
+	article.boards {
+		grid-column: 1;
+		padding: 0 35px 50px;
+	}
+
+	.boards div {
+		grid-row: 1;
+		display: flex;
+    	justify-content: flex-end;
+    	overflow: initial;
+	}
+
+	.boards svg {
+		width: auto;
+		height: 50vw;
+		margin-right: -10vw;
+	}
+
+	.boards a {
+		grid-row: 2;
+	}
+
+	.boards h2 {
+		font-size: 2em;
+	}
+
+	article.inspiring-sites {
+		grid-column: 1;
+		grid-row: 2;
+		padding: 50px 35px;
+	}
+
+	.inspiring-sites svg {
+		width: 100%;
+		position: initial;
+	}
+
+	.web-dev {
+		grid-row: 3;
+	}
+
+	.design {
+		grid-row: 4;
+		text-align: right;
+	}
+
+	.music {
+		grid-row: 5;
+	}
+
+	/** Inspiration - Boards
+	---------------------------------------------------------*/
+	.inspiration {
+		grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+		grid-auto-rows: 150px;
+		margin: 0;
+	}
+
+	/** Inspiration - Links
+	---------------------------------------------------------*/
+	.description {
+		padding: 50px 35px;
+		justify-content: flex-start;
+	}
+
+	.sites {
+		grid-template: 1fr / 1fr;
+	}
+
+	.description h1 {
+		margin-bottom: 0.5em;
+	}
+}

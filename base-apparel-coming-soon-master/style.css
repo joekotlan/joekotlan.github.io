@@ -1,0 +1,106 @@
+/** Landing Page Styles
+---------------------------------------------------------*/
+
+:root {
+	--pink: hsl(0, 36%, 70%);
+	--dark-pink: hsl(0, 93%, 68%);
+	--grey: hsl(0, 6%, 24%);
+	--gradient: linear-gradient(to right, hsl(0, 36%, 70%), hsl(0, 93%, 68%));
+}
+
+body {
+	margin: 0;
+	display: flex;
+	height: 100vh;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.img {
+	height: 100%;
+	width: 50%;
+}
+
+.img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.info {
+	width: calc(50% - 20vw);
+	padding: 4vw 10vw;
+	background: url('images/bg-pattern-desktop.svg') no-repeat;
+	background-size: 100%;
+}
+
+h1 {
+	letter-spacing: 10px;
+	font-size: 4em;
+	text-transform: uppercase;
+	color: var(--grey);
+	margin-top: 7vw;
+}
+
+h1 span {
+	color: var(--pink);
+	font-weight: 300;
+}
+
+p {
+	font-weight: 600;
+	color: var(--pink);
+	line-height: 1.75em;
+	margin-bottom: 2em;
+}
+
+form {
+	position: relative;
+}
+
+input[type="text"] {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	padding: 20px 30px 17px;
+	font-size: 1em;
+	border-radius: 50px;
+	box-shadow: none;
+	outline: none;
+	border: 1px solid var(--pink);
+	width: calc(100% - 60px);
+}
+
+input[type="text"]::placeholder {
+	color: var(--pink);
+	opacity: 0.5;
+	transition: all 0.25s ease;
+}
+
+input[type="submit"] {
+	position: absolute;
+	top: 0;
+	right: -2px;
+	height: 100%;
+	font-size: 1em;
+	-webkit-appearance: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+	border-radius: 50px;
+	background-image: url('images/icon-arrow.svg'), var(--gradient);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+	color: transparent;
+	box-shadow: 0 10px 30px var(--pink);
+	transition: all 0.25s ease;
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+form.invalid input[type="text"] {
+	border: 3px solid var(--dark-pink);
+}

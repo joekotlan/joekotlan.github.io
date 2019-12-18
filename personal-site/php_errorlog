@@ -1,0 +1,4 @@
+[06-Nov-2019 22:10:37 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joekotla/public_html/wordpress/wp-content/themes/main/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/joekotla/public_html/wordpress/wp-content/themes/main/index.php on line 1
