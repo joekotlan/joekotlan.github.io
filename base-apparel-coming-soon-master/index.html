@@ -13,9 +13,9 @@
 			<img src="images/logo.svg" alt="base apparel logo" />
 		  	<h1><span>We're</span> coming soon</h1>
 		  	<p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-		  	<form>
-		  		<input type="text" name="email" placeholder="Email Address" onblur="validateEmail(this.value);">
-		  		<input type="submit" value="Submit">
+		  	<form method="post" action="">
+		  		<input type="email" name="email" id="contact_email" placeholder="Email Address">
+				<button type="submit" id="contact_submit">Submit</button>
 		  	</form>
 		</div>
 		<div class="img">
@@ -27,9 +27,36 @@
   				alt="Woman in teal staring at camera" />
 		</div>
 	</body>
+	<script type='text/javascript' src='jquery.min.js'></script>
 	<script type="text/javascript">
-		if ($('input[type=text].error').length > 0) { 
-		  $('form').addClass('error'); 
-		}
+		$(document).ready(function() {
+				
+			$('#contact_email').on('input', function() {
+				var input=$(this);
+				var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+				var is_email=re.test(input.val());
+				if(is_email){input.removeClass("invalid").addClass("valid");}
+				else{input.removeClass("valid").addClass("invalid");}
+			});
+		
+			$("#contact_submit button").click(function(event){
+				var form_data=$("#contact").serializeArray();
+				var error_free=true;
+				for (var input in form_data){
+					var element=$("#contact_"+form_data[input]['name']);
+					var valid=element.hasClass("valid");
+					var error_element=$("span", element.parent());
+					if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
+					else{error_element.removeClass("error_show").addClass("error");}
+				}
+				if (!error_free){
+					event.preventDefault(); 
+				}
+				else{
+					alert('No errors: Form will be submitted');
+				}
+			});
+			
+		});
 	</script>
 </html>

@@ -6,6 +6,7 @@
 	--dark-pink: hsl(0, 93%, 68%);
 	--grey: hsl(0, 6%, 24%);
 	--gradient: linear-gradient(to right, hsl(0, 36%, 70%), hsl(0, 93%, 68%));
+	--gradient-hover: linear-gradient(to right, hsl(0, 36%, 90%), hsl(0, 93%, 88%));
 }
 
 body {
@@ -57,7 +58,7 @@ form {
 	position: relative;
 }
 
-input[type="text"] {
+input[type="email"] {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 600;
 	padding: 20px 30px 17px;
@@ -65,20 +66,21 @@ input[type="text"] {
 	border-radius: 50px;
 	box-shadow: none;
 	outline: none;
-	border: 1px solid var(--pink);
+	border: 2px solid var(--pink);
 	width: calc(100% - 60px);
+	color: var(--grey);
 }
 
-input[type="text"]::placeholder {
+input[type="email"]::placeholder {
 	color: var(--pink);
 	opacity: 0.5;
 	transition: all 0.25s ease;
 }
 
-input[type="submit"] {
+#contact_submit {
 	position: absolute;
 	top: 0;
-	right: -2px;
+	right: -4px;
 	height: 100%;
 	font-size: 1em;
 	-webkit-appearance: none;
@@ -93,14 +95,20 @@ input[type="submit"] {
 	border: none;
 	color: transparent;
 	box-shadow: 0 10px 30px var(--pink);
-	transition: all 0.25s ease;
+	z-index: 1;
 }
 
-input[type="submit"]:hover {
+#contact_submit:hover {
 	cursor: pointer;
-	opacity: 0.5;
+	background-image: url('images/icon-arrow.svg'), var(--gradient-hover);
 }
 
-form.invalid input[type="text"] {
-	border: 3px solid var(--dark-pink);
+input.invalid {
+	border: 2px solid var(--dark-pink);
+}
+
+input.invalid::after {
+	content: "Please provide a valid email";
+	display: block;
+	margin-top: 10px;
 }
